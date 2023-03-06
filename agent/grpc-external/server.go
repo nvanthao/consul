@@ -13,6 +13,7 @@ import (
 	"github.com/hashicorp/consul/agent/consul/rate"
 	agentmiddleware "github.com/hashicorp/consul/agent/grpc-middleware"
 	"github.com/hashicorp/consul/tlsutil"
+	"google.golang.org/grpc/reflection"
 )
 
 var (
@@ -68,5 +69,7 @@ func NewServer(logger agentmiddleware.Logger, metricsObj *metrics.Metrics, tls *
 			logger)
 		opts = append(opts, grpc.Creds(tlsCreds))
 	}
-	return grpc.NewServer(opts...)
+	srv := grpc.NewServer(opts...)
+	reflection.Register(srv)
+	return srv
 }

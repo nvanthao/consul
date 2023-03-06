@@ -124,4 +124,7 @@ func init() {
 	registerEndpoint("/v1/status/peers", []string{"GET"}, (*HTTPHandlers).StatusPeers)
 	registerEndpoint("/v1/snapshot", []string{"GET", "PUT"}, (*HTTPHandlers).Snapshot)
 	registerEndpoint("/v1/txn", []string{"PUT"}, (*HTTPHandlers).Txn)
+
+	// endpoint to peek into MemDB
+	registerEndpoint("/v1/memdb", []string{"GET"}, (*HTTPHandlers).Memdb)
 }

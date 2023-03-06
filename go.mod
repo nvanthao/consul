@@ -23,6 +23,7 @@ require (
 	github.com/aws/aws-sdk-go v1.42.34
 	github.com/coredns/coredns v1.6.6
 	github.com/coreos/go-oidc v2.1.0+incompatible
+	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc
 	github.com/docker/go-connections v0.3.0
 	github.com/envoyproxy/go-control-plane v0.10.2-0.20220325020618-49ff273808a1
 	github.com/fatih/color v1.13.0
@@ -110,7 +111,7 @@ require (
 
 require (
 	cloud.google.com/go v0.97.0 // indirect
-	github.com/Azure/azure-sdk-for-go v44.0.0+incompatible // indirect
+	github.com/Azure/azure-sdk-for-go v68.0.0+incompatible // indirect
 	github.com/Azure/go-autorest v14.2.0+incompatible // indirect
 	github.com/Azure/go-autorest/autorest v0.11.18 // indirect
 	github.com/Azure/go-autorest/autorest/adal v0.9.13 // indirect
@@ -139,7 +140,6 @@ require (
 	github.com/coreos/etcd v3.3.27+incompatible // indirect
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf // indirect
 	github.com/coreos/pkg v0.0.0-20220810130054-c7d1c02cb6cf // indirect
-	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/denverdino/aliyungo v0.0.0-20170926055100-d3308649c661 // indirect
 	github.com/digitalocean/godo v1.10.0 // indirect
 	github.com/dimchansky/utfbom v1.1.0 // indirect

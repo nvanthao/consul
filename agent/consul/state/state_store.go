@@ -315,3 +315,11 @@ func indexUpdateMaxTxn(tx WriteTxn, idx uint64, key string) error {
 	}
 	return nil
 }
+
+func (s *Store) GetSchema() *memdb.DBSchema {
+	return s.schema
+}
+
+func (s *Store) GetDB() *memdb.MemDB {
+	return s.db.db
+}
