@@ -10,6 +10,8 @@ go 1.20
 // 	github.com/hashicorp/consul/troubleshoot => ./troubleshoot
 // )
 
+replace github.com/hashicorp/go-memdb v1.3.4 => /Users/gerard/dev/consul/go-memdb
+
 exclude (
 	github.com/hashicorp/go-msgpack v1.1.5 // has breaking changes and must be avoided
 	github.com/hashicorp/go-msgpack v1.1.6 // contains retractions but same as v1.1.5
