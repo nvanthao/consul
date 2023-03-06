@@ -12,6 +12,8 @@ go 1.20
 
 replace github.com/hashicorp/go-memdb v1.3.4 => /Users/gerard/dev/consul/go-memdb
 
+replace github.com/hashicorp/go-immutable-radix v1.3.1 => /Users/gerard/dev/consul/go-immutable-radix
+
 exclude (
 	github.com/hashicorp/go-msgpack v1.1.5 // has breaking changes and must be avoided
 	github.com/hashicorp/go-msgpack v1.1.6 // contains retractions but same as v1.1.5
@@ -145,6 +147,7 @@ require (
 	github.com/denverdino/aliyungo v0.0.0-20170926055100-d3308649c661 // indirect
 	github.com/digitalocean/godo v1.10.0 // indirect
 	github.com/dimchansky/utfbom v1.1.0 // indirect
+	github.com/emicklei/dot v1.3.1 // indirect
 	github.com/envoyproxy/protoc-gen-validate v0.1.0 // indirect
 	github.com/form3tech-oss/jwt-go v3.2.2+incompatible // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
