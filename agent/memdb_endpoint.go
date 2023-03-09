@@ -61,5 +61,15 @@ func (s *HTTPHandlers) Memdb(resp http.ResponseWriter, req *http.Request) (inter
 		}
 		resp.Write(b)
 	}
+
+	// extract dot if required
+	dot := req.URL.Query().Get("dot")
+	if dot != "" {
+		resp.Write([]byte("=== 	RADIX TREE FOR " + table + " ===\n"))
+		t := db.GetRoot()
+		s := t.ToDot()
+		resp.Write([]byte(s))
+	}
+
 	return nil, nil
 }
