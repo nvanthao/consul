@@ -30,6 +30,7 @@ import (
 	"go.etcd.io/bbolt"
 	"golang.org/x/time/rate"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 
 	"github.com/hashicorp/consul-net-rpc/net/rpc"
 
@@ -891,6 +892,9 @@ func newGRPCHandlerFromConfig(deps Deps, config *Config, s *Server) connHandler 
 		s.peerStreamServer.Register(srv)
 		s.externalACLServer.Register(srv)
 		s.externalConnectCAServer.Register(srv)
+
+		// expose the gRPC server for testing
+		reflection.Register(srv)
 	}
 
 	return agentgrpc.NewHandler(deps.Logger, config.RPCAddr, register, nil, s.incomingRPCLimiter)
